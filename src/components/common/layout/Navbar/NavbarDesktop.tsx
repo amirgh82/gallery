@@ -10,6 +10,7 @@ import { SearchBox } from "./SearchBox";
 import { LoginDialog } from "../../../features/LoginDialog/LoginDialog";
 import { useState } from "react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Basket } from "./Basket";
 
 export function NavbarDesktop() {
     const pathname = usePathname();
@@ -58,14 +59,7 @@ export function NavbarDesktop() {
             </nav>
             <div className="hidden md:flex items-center gap-4">
                 <SearchBox />
-                <Button
-                    variant="outline"
-                    size="icon"
-                    className="cursor-pointer"
-                    aria-label="سبد خرید"
-                >
-                    <ShoppingCart className="h-4 w-4" />
-                </Button>
+                <Basket />
                 <Button
                     variant="outline"
                     size="default"
