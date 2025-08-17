@@ -9,6 +9,7 @@ import { NAVBAR_LINKS } from "@/constants/NAVBAR_LINKS";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { LoginDialog } from "../../../features/LoginDialog/LoginDialog";
+import { Basket } from "./Basket";
 
 
 export function NavbarMobile() {
@@ -64,7 +65,8 @@ export function NavbarMobile() {
                                     <div key={href} className="flex flex-col">
                                         {children && children.length > 0 ? (
                                             <div className="flex flex-col">
-                                                <button
+                                                <Button
+                                                    variant={"ghost"}
                                                     onClick={() => toggleExpanded(href)}
                                                     className={cn(
                                                         "nav-link-mobile cursor-pointer flex items-center justify-between w-full",
@@ -82,7 +84,7 @@ export function NavbarMobile() {
                                                     ) : (
                                                         <ChevronDown className="w-4 h-4" />
                                                     )}
-                                                </button>
+                                                </Button>
 
                                                 {expandedItems.has(href) && (
                                                     <div className="mr-6 mt-2 flex flex-col space-y-2 animate-fade-in">
@@ -139,14 +141,7 @@ export function NavbarMobile() {
 
                 {/* Left side: Cart + Login icon button */}
                 <div className="flex items-center gap-4">
-                    <Button
-                        variant="outline"
-                        size="icon"
-                        className="cursor-pointer"
-                        aria-label="سبد خرید"
-                    >
-                        <ShoppingCart className="h-4 w-4" />
-                    </Button>
+                  <Basket />
                     <Button
                         variant="outline"
                         size="icon"
