@@ -1,7 +1,7 @@
 
 import { Banner, ProductCardSkeleton, ProductSlider, WhyChooseUs } from "@/components/common";
 
-const bestSellerProducts = [
+export const bestSellerProducts = [
   {
     id: 1,
     name: "محصول شماره ۱",

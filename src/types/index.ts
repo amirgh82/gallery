@@ -1,6 +1,7 @@
 // Re-export all types for easier imports
 export * from './auth';
 export * from './FAQ';
+export * from './product';
 
 // Common types that might be used throughout the application
 export interface ApiResponse<T = any> {
